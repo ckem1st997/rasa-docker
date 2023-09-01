@@ -26,3 +26,14 @@ policies:
   max_training_samples: 300
 - name: MemoizationPolicy
 - name: RulePolicy
+cors:
+  enabled: true
+  allow_origins:
+  - "*"
+  allow_credentials: false
+  allow_methods:
+  - "OPTIONS"
+  - "GET"
+  - "POST"
+  allow_headers:
+  - "*"

@@ -12,7 +12,7 @@ services:
     volumes:
     - "./rasa-app-data/models:/app/models"
     - "./rasa-app-data/logs:/app/logs"
-    command: "run --enable-api --debug"
+    command: "run --enable-api --cors '*' --debug"
     user: root
 
   rasa_ui:       
