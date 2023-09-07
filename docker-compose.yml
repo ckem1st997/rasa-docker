@@ -43,6 +43,7 @@ services:
     depends_on:
       - "rasa"
 
+# vào bằng http
   chatbot-ui:
     container_name: chatbot-ui
     build:
