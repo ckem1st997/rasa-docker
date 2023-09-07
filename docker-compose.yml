@@ -47,7 +47,7 @@ services:
     container_name: chatbot-ui
     build:
       context: .
-      dockerfile: /Chatbot-UI/Dockerfile
+      dockerfile: Chatbot-UI/Dockerfile
     networks: ['rasa-network']
     ports:
       - "5010:80"
