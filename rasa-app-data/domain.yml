@@ -1,0 +1,78 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - sanpham
+  - location
+  - vesinh
+  - vesinhmtvp
+  - vesinhserver
+  - baohanh
+  - huydon
+
+
+responses:
+
+  utter_huydon:
+    - text: "Bạn cung cấp thông tin đơn đã tạo để Hacom hướng dẫn chi tiết bạn nhé !"
+      
+  utter_vesinh:
+    - text: "Bên mình có nhận vệ sinh laptop tại nhà và tại cửa hàng bạn nhé !"
+    - text: "Những sản phầm laptop mua tại Hacom được vệ sinh miễn phí bạn nhé !"
+  
+  utter_vesinhmtvp:
+    - text: "Bên mình có nhận vệ sinh destop tại VP bạn nhé !"
+    - text: "Những sản phầm desktop mua tại Hacom được vệ sinh miễn phí bạn nhé !"
+
+  utter_vesinhserver:
+    - text: "Bên mình có nhận vệ sinh server tại VP bạn nhé !"
+    - text: "Những sản phầm mua tại Hacom được vệ sinh miễn phí bạn nhé !"
+
+  utter_sanpham:
+    - text: "Dạ sản phẩm này bên em hiện hết hàng trên toàn hệ thống rồi ạ !"
+    - text: "Bên có thể cung cấp cho mình mã sản phầm bạn quan tâm không !"
+    - text: "Mình sẽ gửi cho bạn thông tin mô tả chi tiết sản phẩm, giá và các chương trình chiết khấu nhé!"
+    - text: "Anh chị đang quan tâm tới dòng sản phẩm nào ạ?"
+      
+  utter_baohanh:
+   - text: "Những sản phầm mua tại Hacom được bảo hành theo chính hãng và chế độ bảo hành riêng miễn phí thêm 1 năm của Hacom bạn nhé !"
+   - text: "Anh nhắn em xin địa chỉ nhận hàng nhé ạ !"
+
+  utter_location:
+    - text: "Hacom có showroom tại Hà nội, TP HCM, Vinh, Thanh Hóa, Hải Phòng, Hà Nam, Nam Định bạn nhé !"
+    - text: "Hacom Hà nội có tại Cầu Giấy, HBT, HĐ, Thanh Trì, Đông Anh bạn nhé !"
+    - text: "Bạn cần cung cấp vị trí chính xác để Hacom tính toán khoảng cách và đề xuất ưu đãi free-ship cho bạn nhé"
+    - text: "Bạn ở xa quá Hacom phải tính phí ship bạn nhé !"
+      
+  utter_greet:
+  - text: "Xin chào! Tôi có thể giúp gì cho bạn?"
+  - text: "Chào bạn! Bạn cần Bot giúp gì không?"
+  - text: "Xin chào!\nTôi là Bot, rất hân hạnh được trò chuyện với bạn!"
+  - text: "HACOM: HACOM xin kính chào! Cảm ơn anh, chị đã liên hệ tới HACOM. Thời gian hỗ trợ, tư vấn, trả lời từ 8h-24h hàng ngày. Hãy gửi cho chúng tôi mọi câu hỏi của quý anh, chị. Trân trọng!"
+  - text: "HACOM sẵn sàng hỗ trợ ạ!"
+  utter_cheer_up:
+  - text: "Đây là thiệp gửi bạn, mong bạn sẽ vui:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Nó có thể giúp bạn không?"
+
+  utter_happy:
+  - text: "Great. Thật tuyệt, tiếp thôi!"
+
+  utter_goodbye:
+  - text: "Tạm biệt bạn!"
+  - text: "Bye!"
+
+  utter_iamabot:
+  - text: "Tôi là 1 con Bot"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

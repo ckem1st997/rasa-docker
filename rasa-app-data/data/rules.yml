@@ -1,0 +1,43 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Hỏi vệ sinh
+  steps:
+  - intent: vesinh
+  - action: utter_vesinh
+
+- rule: Hỏi vệ sinh destop
+  steps:
+  - intent: vesinhmtvp
+  - action: utter_vesinhmtvp
+
+- rule: Hỏi vệ sinh server
+  steps:
+  - intent: vesinhserver
+  - action: utter_vesinhserver
+
+- rule: Hỏi sp
+  steps:
+  - intent: sanpham
+  - action: utter_sanpham
+
+- rule: Hỏi bảo hành
+  steps:
+  - intent: baohanh
+  - action: utter_baohanh
+
+- rule: location
+  steps:
+  - intent: location
+  - action: utter_location

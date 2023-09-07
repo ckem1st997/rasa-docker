@@ -30,6 +30,7 @@ services:
 
 # thực hiện train data đẩy model vô rasa để xử lý, sẽ phải đợi lâu
 # setup file với thư mục như mẫu
+# train xong thì khởi động lại
   rasa_train:
     container_name: rasa_train
     build:

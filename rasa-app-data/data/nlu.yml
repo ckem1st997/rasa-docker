@@ -1,209 +1,209 @@
 version: "2.0"
 nlu:
-- intent: vesinh
-  examples: |
-    - vệ sinh laptop
-    - lau chùi laptop
-    - làm sạch laptop
-    - vs laptop
-    - hút bụi laptop
-    - làm mới laptop
-    - bảo trì laptop
+  - intent: vesinh
+    examples: |
+      - vệ sinh laptop
+      - lau chùi laptop
+      - làm sạch laptop
+      - vs laptop
+      - hút bụi laptop
+      - làm mới laptop
+      - bảo trì laptop
 
-- intent: vesinhserver
-  examples: |
-    - vệ sinh server
-    - vệ sinh máy chủ
-    - vs server
-    - vs may chu
-    - vs máy chủ
+  - intent: vesinhserver
+    examples: |
+      - vệ sinh server
+      - vệ sinh máy chủ
+      - vs server
+      - vs may chu
+      - vs máy chủ
 
-- intent: vesinhmtvp
-  examples: |
-    - vệ sinh máy tính desktop
-    - vs máy tính vp
-    - vệ sinh máy tính văn phòng
-    - vs máy tính văn phòng
-    - vệ sinh mt vp
-    - vệ sinh desktop
-    - làm sạch mt
-    - vệ sinh máy văn phòng
-    - vệ sinh máy vp
+  - intent: vesinhmtvp
+    examples: |
+      - vệ sinh máy tính desktop
+      - vs máy tính vp
+      - vệ sinh máy tính văn phòng
+      - vs máy tính văn phòng
+      - vệ sinh mt vp
+      - vệ sinh desktop
+      - làm sạch mt
+      - vệ sinh máy văn phòng
+      - vệ sinh máy vp
 
-- intent: baohanh
-  examples: |
-    - bảo hành sp
-    - bảo hành thế nào
-    - bảo hành Hacom
-    - bh chính hãng
-    - bảo hành chính hãng
-    - bảo hành theo chế độ nào
-    - chế độ bảo hành
-    - chế độ bh
+  - intent: baohanh
+    examples: |
+      - bảo hành sp
+      - bảo hành thế nào
+      - bảo hành Hacom
+      - bh chính hãng
+      - bảo hành chính hãng
+      - bảo hành theo chế độ nào
+      - chế độ bảo hành
+      - chế độ bh
 
-- intent: sanpham
-  examples: |
-    - sản phẩm giảm giá
-    - thông tin sp
-    - thông tin sản phẩm mới
-    - sản phẩm xả tồn
-    - hotdeal
-    - flash sale
-    - sp top sale
-    - topsale
-    - bán chạy
-    - bán chạy nhất trong tháng
-    - xem thông tin sp
-    - chi tiết thông tin sản phầm
-    - chi tiết cấu hình
-    - sản phầm hết hàng
-    - sản phẩm còn hàng k
-    - sp này còn không
-    - sp này còn hàng k
-    - còn hàng
-
-
-- intent: location
-  examples: |
-    - hacom có ở đâu?
-    - vị trí của hàng hacom
-    - chi nhánh hacom
-    - địa chỉ hacom
-    - vị trí hacom
-    - hacom cầu giấy ở đâu
-    - hacom vinh ở đâu
-    - mua hàng tại của hàng haco nào gần nhất
-    - hacom gần nhất
-    - vị trí của bạn
-    - bạn ở đâu
-    - địa chỉ của bạn
-    - ở quận nào
-    - phường nào
-    - tỉnh nào
-    - phường xã quận huyện nào
-    - Hacom hà nội, vinh, thanh hóa, hà nam, TP HCM
-    - Hacom hà nội, cầu giấy, thanh trì, đông anh, hđ, HBT
-    - miễn phí ship
-    - miễn phí ship nội thành
-    - tính phí ship khoảng cách > 20km
-    - freeship nội thành
-    - anh cần e gửi ship cho a
-
-- intent: greet
-  examples: |
-    - hey???
-    - hello
-    - hi
-    - chào
-    - xin chào
-    - chào bot
-    - có ai ở đó không
-    - tôi cần hỗ trợ
-    - Chào bạn
-    - Chào anh
-    - Chào chị
-    - Chào buổi sáng
-    - Có đó không
-    - Rãnh không
-    - Ê
-    - Hú
-    - chào em
-    - em ơi, cho anh hỏi
-    - bot ơi
-    - cho mình hỏi chút
-    - hacom
-    - chào hacom
-    - Chào Hacom
-    - chao HACOM
-    - hi hacom
-    - hello hacom
-    - morning hacom
-    - chào hanoi computer
-    - hi hanoi computer
-    - hi hanoicomputer
-
-- intent: goodbye
-  examples: |
-    - bye
-    - goodbye
-    - g9
-    - good night
-    - bye bye
-    - tạm biệt
-    - Hẹn gặp lại
-    - Ngủ ngon
-    - Chúc ngủ ngon
-    - Nói chuyện sau nhé
-    - Tôi sẽ liên hệ sau
-    - tạm biệt em
-    - tạm biệt bot nhá
-    - quit
-    - tam biet hacom
-    - tạm biệt hacom
-    - Bye Hacom
-    - by hacom
-    - bb
+  - intent: sanpham
+    examples: |
+      - sản phẩm giảm giá
+      - thông tin sp
+      - thông tin sản phẩm mới
+      - sản phẩm xả tồn
+      - hotdeal
+      - flash sale
+      - sp top sale
+      - topsale
+      - bán chạy
+      - bán chạy nhất trong tháng
+      - xem thông tin sp
+      - chi tiết thông tin sản phầm
+      - chi tiết cấu hình
+      - sản phầm hết hàng
+      - sản phẩm còn hàng k
+      - sp này còn không
+      - sp này còn hàng k
+      - còn hàng
 
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: location
+    examples: |
+      - hacom có ở đâu?
+      - vị trí của hàng hacom
+      - chi nhánh hacom
+      - địa chỉ hacom
+      - vị trí hacom
+      - hacom cầu giấy ở đâu
+      - hacom vinh ở đâu
+      - mua hàng tại của hàng haco nào gần nhất
+      - hacom gần nhất
+      - vị trí của bạn
+      - bạn ở đâu
+      - địa chỉ của bạn
+      - ở quận nào
+      - phường nào
+      - tỉnh nào
+      - phường xã quận huyện nào
+      - Hacom hà nội, vinh, thanh hóa, hà nam, TP HCM
+      - Hacom hà nội, cầu giấy, thanh trì, đông anh, hđ, HBT
+      - miễn phí ship
+      - miễn phí ship nội thành
+      - tính phí ship khoảng cách > 20km
+      - freeship nội thành
+      - anh cần e gửi ship cho a
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: greet
+    examples: |
+      - hey???
+      - hello
+      - hi
+      - chào
+      - xin chào
+      - chào bot
+      - có ai ở đó không
+      - tôi cần hỗ trợ
+      - Chào bạn
+      - Chào anh
+      - Chào chị
+      - Chào buổi sáng
+      - Có đó không
+      - Rãnh không
+      - Ê
+      - Hú
+      - chào em
+      - em ơi, cho anh hỏi
+      - bot ơi
+      - cho mình hỏi chút
+      - hacom
+      - chào hacom
+      - Chào Hacom
+      - chao HACOM
+      - hi hacom
+      - hello hacom
+      - morning hacom
+      - chào hanoi computer
+      - hi hanoi computer
+      - hi hanoicomputer
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - g9
+      - good night
+      - bye bye
+      - tạm biệt
+      - Hẹn gặp lại
+      - Ngủ ngon
+      - Chúc ngủ ngon
+      - Nói chuyện sau nhé
+      - Tôi sẽ liên hệ sau
+      - tạm biệt em
+      - tạm biệt bot nhá
+      - quit
+      - tam biet hacom
+      - tạm biệt hacom
+      - Bye Hacom
+      - by hacom
+      - bb
+    
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
-- intent: bot_challenge
-  examples: |
-    - bạn là một con bot?
-    - bạn là human?
-    - bạn là người
-    - người chat
-    - bot chat
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - bạn là một con bot?
+      - bạn là human?
+      - bạn là người
+      - người chat
+      - bot chat
+      - am I talking to a bot?
+      - am I talking to a human?
