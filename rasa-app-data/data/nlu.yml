@@ -1,209 +1,498 @@
-version: "2.0"
+version: "3.1"
 nlu:
-  - intent: vesinh
-    examples: |
-      - vệ sinh laptop
-      - lau chùi laptop
-      - làm sạch laptop
-      - vs laptop
-      - hút bụi laptop
-      - làm mới laptop
-      - bảo trì laptop
+- intent: huy_hd
+  examples: |
+    - tôi muốn hủy đơn tôi vừa tạo
+    - làm thế nào để tôi hủy đơn mua hàng của tôi
+    - làm thế nào tôi có thể hủy đơn hàng cuối cùng tôi đã tạo
+    - tôi cố gắng hủy 1 đơn
+    - tôi muốn hướng dẫn để hủy đơn
+    - hủy đơn
 
-  - intent: vesinhserver
-    examples: |
-      - vệ sinh server
-      - vệ sinh máy chủ
-      - vs server
-      - vs may chu
-      - vs máy chủ
+- intent: phi_giao_hang
+  examples: |
+    - vậy tôi thanh toán hết là được miễn ship đúng không
+    - phí giao hàng
 
-  - intent: vesinhmtvp
-    examples: |
-      - vệ sinh máy tính desktop
-      - vs máy tính vp
-      - vệ sinh máy tính văn phòng
-      - vs máy tính văn phòng
-      - vệ sinh mt vp
-      - vệ sinh desktop
-      - làm sạch mt
-      - vệ sinh máy văn phòng
-      - vệ sinh máy vp
+- intent: san_pham_chuot
+  examples: |
+    - Chuột laptop
+    - Tôi muốn mua chuột Fulen G90
+    - tôi muốn mua chuột
+    - chuột
+    - chuột máy tính
 
-  - intent: baohanh
-    examples: |
-      - bảo hành sp
-      - bảo hành thế nào
-      - bảo hành Hacom
-      - bh chính hãng
-      - bảo hành chính hãng
-      - bảo hành theo chế độ nào
-      - chế độ bảo hành
-      - chế độ bh
+- intent: san_pham_laptop
+  examples: |
+    - Laptop Asus VivoBook A515EA-BQ491T
+    - Dell M4800
+    - Laptop Acer Aspire 5 A515
+    - Lenovo IdeaPad 3 14ALC6
+    - laptop MSI Modern 14 core i3 1115G4
+    - Asus UX581
+    - 'Laptop MSI Gaming Katana GF66 '
+    - Laptop
+    - tôi cần mua laptop
+    - laptop có những loại nào
 
-  - intent: sanpham
-    examples: |
-      - sản phẩm giảm giá
-      - thông tin sp
-      - thông tin sản phẩm mới
-      - sản phẩm xả tồn
-      - hotdeal
-      - flash sale
-      - sp top sale
-      - topsale
-      - bán chạy
-      - bán chạy nhất trong tháng
-      - xem thông tin sp
-      - chi tiết thông tin sản phầm
-      - chi tiết cấu hình
-      - sản phầm hết hàng
-      - sản phẩm còn hàng k
-      - sp này còn không
-      - sp này còn hàng k
-      - còn hàng
+- intent: san_pham_ram
+  examples: |
+    - Ram Desktop Adata XPG Spectrix D50 RGB
+    - ram
+    - tôi cần mua ram
+    - bạn tư vấn cho tôi vài con ram đi
+    - ram máy tính
 
+- intent: san_pham_o_cung
+  examples: |
+    - Ổ cứng msata ssd
+    - Ổ cứng di động
+    - Mình muốn hỏi ổ cứng ngoài cho macbook
+    - Ổ cứng SSD 512
+    - ổ cứng
+    - Ổ cứng
+    - tôi cần mua ổ cứng
+    - tham khảo giá ổ cứng
+    - làm sao để mua ổ cứng
+    - ổ cứng giá rẻ
+    - bên mình bán những loại ổ cứng gì
 
-  - intent: location
-    examples: |
-      - hacom có ở đâu?
-      - vị trí của hàng hacom
-      - chi nhánh hacom
-      - địa chỉ hacom
-      - vị trí hacom
-      - hacom cầu giấy ở đâu
-      - hacom vinh ở đâu
-      - mua hàng tại của hàng haco nào gần nhất
-      - hacom gần nhất
-      - vị trí của bạn
-      - bạn ở đâu
-      - địa chỉ của bạn
-      - ở quận nào
-      - phường nào
-      - tỉnh nào
-      - phường xã quận huyện nào
-      - Hacom hà nội, vinh, thanh hóa, hà nam, TP HCM
-      - Hacom hà nội, cầu giấy, thanh trì, đông anh, hđ, HBT
-      - miễn phí ship
-      - miễn phí ship nội thành
-      - tính phí ship khoảng cách > 20km
-      - freeship nội thành
-      - anh cần e gửi ship cho a
+- intent: san_pham_man_hinh
+  examples: |
+    - Màn hình ViewSonic VA2430-H-W-6
+    - Màn hình LG UltraGear 27GL850-B
+    - MÀN HÌNH ASUS PRO ART PA248QV (24INCH/WUXGA/IPS/75HZ/5MS/300NITS/HDMI
+    - https://hacom.vn/man-hinh-lg-24qp750-b
+    - Màn hình
+    - màn hình
+    - tôi cần mua màn hình
+    - tư vấn màn hình
+    - màn hình led
+    - màn hình giá rẻ
+    - màn hình 4k
+    - màn hình vi tính
 
-  - intent: greet
-    examples: |
-      - hey???
-      - hello
-      - hi
-      - chào
-      - xin chào
-      - chào bot
-      - có ai ở đó không
-      - tôi cần hỗ trợ
-      - Chào bạn
-      - Chào anh
-      - Chào chị
-      - Chào buổi sáng
-      - Có đó không
-      - Rãnh không
-      - Ê
-      - Hú
-      - chào em
-      - em ơi, cho anh hỏi
-      - bot ơi
-      - cho mình hỏi chút
-      - hacom
-      - chào hacom
-      - Chào Hacom
-      - chao HACOM
-      - hi hacom
-      - hello hacom
-      - morning hacom
-      - chào hanoi computer
-      - hi hanoi computer
-      - hi hanoicomputer
+- intent: san_pham_card
+  examples: |
+    - Card màn hình
+    - card
+    - tôi muốn mua card màn hình
+    - tôi muốn mua card
 
-  - intent: goodbye
-    examples: |
-      - bye
-      - goodbye
-      - g9
-      - good night
-      - bye bye
-      - tạm biệt
-      - Hẹn gặp lại
-      - Ngủ ngon
-      - Chúc ngủ ngon
-      - Nói chuyện sau nhé
-      - Tôi sẽ liên hệ sau
-      - tạm biệt em
-      - tạm biệt bot nhá
-      - quit
-      - tam biet hacom
-      - tạm biệt hacom
-      - Bye Hacom
-      - by hacom
-      - bb
-    
+- intent: san_pham_PC
+  examples: |
+    - Máy tinh mini đơn giản nhất
+    - Tôi cần máy mini chạy ít tốn điện nhất
+    - Máy tính INTEL NUC7CJYH Celeron J4005
+    - tôi cần mua PC
+    - máy tính
+    - tôi cần mua máy tính
+    - máy tính cây
+    - PC
 
-  - intent: affirm
-    examples: |
-      - yes
-      - y
-      - indeed
-      - of course
-      - that sounds good
-      - correct
+- intent: san_pham_game
+  examples: |
+    - Tay cầm
+    - Xbox series x
+    - Vô lăng PXN V900
+    - Sản phẩm phục vụ chơi game
+    - phụ kiện chơi game
+    - game
 
-  - intent: deny
-    examples: |
-      - no
-      - n
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really
+- intent: san_pham_tai_nghe
+  examples: |
+    - Tai nghe Kingston HyperX CLOUD STINGER CORE 7.1 Black - HHSS1C-AA-BK/G
+    - Tai nghe E-Dra EH410 Pro USB Led RGB
+    - tai nghe
+    - shop có bán tai nghe không
+    - tôi cần 1 cái tai nghe
+    - tai nghe giá rẻ
+    - mua tai nghe
+    - tư vấn bán tai nghe
+    - tai nghe không dây
+    - tai nghe có dây
 
-  - intent: mood_great
-    examples: |
-      - perfect
-      - great
-      - amazing
-      - feeling like a king
-      - wonderful
-      - I am feeling very good
-      - I am great
-      - I am amazing
-      - I am going to save the world
-      - super stoked
-      - extremely good
-      - so so perfect
-      - so good
-      - so perfect
+- intent: san_pham_case
+  examples: |
+    - Vỏ Case Vitra POSEIDON G5 (Mid Tower / Màu Đen)
+    - vỏ case
+    - case
+    - mua vỏ case
+    - build máy tính cần vở case
+    - build máy tính cần case
 
-  - intent: mood_unhappy
-    examples: |
-      - my day was horrible
-      - I am sad
-      - I don't feel very well
-      - I am disappointed
-      - super sad
-      - I'm so sad
-      - sad
-      - very sad
-      - unhappy
-      - not good
-      - not very good
-      - extremly sad
-      - so saad
-      - so sad
+- intent: san_pham_webcam
+  examples: |
+    - Webcam
+    - tôi cần mua webcam
+    - webcam
+    - mua webcam
+    - webcam học sinh, sinh viên
+    - webcam học online
 
-  - intent: bot_challenge
-    examples: |
-      - bạn là một con bot?
-      - bạn là human?
-      - bạn là người
-      - người chat
-      - bot chat
-      - am I talking to a bot?
-      - am I talking to a human?
+- intent: san_pham_wifi
+  examples: |
+    - Moden nào vừa cắm trực tiếp vừa phát wifi
+    - Wifi mesh
+    - mua wifi
+    - wifi
+
+- intent: san_pham_linh_kien
+  examples: |
+    - PC - Laptop và linh kiện
+    - linh kiện
+    - Linh kiện
+
+- intent: san_pham_ghe
+  examples: |
+    - Ghế gamer E-Dra Queen - EGC225
+    - Ghế
+    - ghế gaming
+    - mua ghế
+    - tôi cần mua ghế
+    - tư vấn ghế
+
+- intent: location
+  examples: |
+    - hacom có ở đâu?
+    - vị trí của hàng hacom
+    - chi nhánh hacom
+    - địa chỉ hacom
+    - vị trí hacom
+    - hacom cầu giấy ở đâu
+    - hacom vinh ở đâu
+    - mua hàng tại của hàng haco nào gần nhất
+    - hacom gần nhất
+    - vị trí của bạn
+    - bạn ở đâu
+    - địa chỉ của bạn
+    - ở quận nào
+    - phường nào
+    - tỉnh nào
+    - phường xã quận huyện nào
+    - Hacom hà nội, vinh, thanh hóa, hà nam, TP HCM
+    - Hacom hà nội, cầu giấy, thanh trì, đông anh, hđ, HBT
+    - địa chỉ
+    - ở đâu
+
+- intent: ve_sinh
+  examples: |
+    - Vệ sinh máy tính với thay nước tản nhiệt tại nhà
+    - Chương trình vệ sinh máy miễn phí
+    - vệ sinh laptop
+    - lau chùi laptop
+    - làm sạch laptop
+    - vs laptop
+    - hút bụi laptop
+    - làm mới laptop
+    - bảo trì laptop
+    - vệ sinh
+
+# examples: |
+#   - 'Hacom có hỗ trợ dán chống xước không '
+
+- intent: contact_cskh
+  # intent: ve_sinh_chong_xuoc  
+  examples: |
+    - Chăm sóc khách hàng
+    - Liên hệ dịch vụ chăm sóc khách hàng
+    - Tư vấn bán hàng
+    - chăm sóc khách hàng
+    - cskh
+
+- intent: kiem_tra
+  examples: |
+    - Tư vấn lắp thêm ram
+    - Thay tản nhiệt khi thành tản nhiệt nước được không
+    - Vừa sạc vừa dùng máy tính
+    - Bên mình có sửa bàn phím cơ không
+    - Thay tấm nền mất bao lâu và chi phí như thế nào
+    - Bị hỏng tấm nền
+    - Ấn nút nguồn mãi máy mới lên
+    - Máy tính tôi bị lỗi
+    - Cài đặt lại cổng kết nối
+    - Hỗ trợ Kỹ thuật
+    - Tôi đang dùng thì nó báo lỗi rồi nó tắt màn hình
+    - Laptop của tôi báo lỗi rồi tắt màn hình nhưng quạt vẫn chạy
+    - tôi cần kiểm tra máy tính
+    - kiểm tra
+    - Lỗi máy tính
+    - Sửa máy tính
+    - sửa máy
+
+- intent: lap_dat
+  examples: |
+    - Có tính phí lắp đặt không
+    - Hàng về có được xem lắp đặt không
+    - lắp đặt
+    - lắp đặt tận nhà
+
+- intent: thoi_gian_giao_van
+  examples: |
+    - Thời gian giao hàng là bao lâu
+    - thơi gian giao hàng
+    - giao hàng
+    - đơn hàng giao trong bao lâu
+    - giao hàng như thế nào
+
+- intent: dia_chi_ship
+  examples: |
+    - Tôi mong muốn có hàng trong sáng mai
+    - Nếu mua sản phẩm có đc hỗ trợ ship không
+    - Lấy tại cửa hàng không ship
+    - Địa chỉ của tôi
+    - Ship tận nhà tại Hà Nội có miễn phí không
+    - địa chỉ ship hàng
+    - địa chỉ ship
+
+- intent: doi_tra
+  examples: |
+    - Hỗ trợ đổi hàng
+    - đổi trả
+    - tôi muốn đổi trả hàng
+    - đổi hàng
+    - trả hàng
+    - hàng lỗi muốn đổi hàng
+    - hàng lỗi muốn đổi hàng như thế nào
+    - đổi hàng như thế nào
+    - thủ tục đổi hàng
+
+- intent: bao_hanh
+  examples: |
+    - Kiểm tra thông tin bảo hành
+    - Thời hạn bảo hành còn không
+    - Chương trình bán sản phẩm mới và vẫn bảo hành đầy đủ đúng không?
+    - Bảo hành bao lâu
+    - Hết bảo hành và lại bị hỏng tấm nền
+    - bảo hành sp
+    - bảo hành thế nào
+    - bảo hành Hacom
+    - bh chính hãng
+    - bảo hành chính hãng
+    - bảo hành theo chế độ nào
+    - chế độ bảo hành
+    - chế độ bh
+    - bảo hành
+
+- intent: goodbye
+  examples: |
+    - Cảm ơn
+    - Chúc bạn một buổi tối vui vẻ
+    - bye
+    - goodbye
+    - g9
+    - good night
+    - bye bye
+    - tạm biệt
+    - Hẹn gặp lại
+    - Ngủ ngon
+    - Chúc ngủ ngon
+    - Nói chuyện sau nhé
+    - Tôi sẽ liên hệ sau
+    - tạm biệt em
+    - tạm biệt bot nhá
+    - quit
+    - tam biet hacom
+    - tạm biệt hacom
+    - Bye Hacom
+    - by hacom
+    - bb
+
+- intent: phan_mem_windows
+  examples: |
+    - Windows bản quyền
+    - windows
+    - cài windows
+
+- intent: phan_mem
+  examples: |
+    - Bây giờ tôi đang muốn dùng microsoft
+    - Bản cài sẵn trong máy bắt buộc mình phải có tài khoản microsoft
+    - phần mềm
+    - cài phần mềm
+
+- intent: ho_tro_khac
+  examples: |
+    - Tra cứu giao hàng/ Hỗ trợ khác
+    - Hỗ trợ khác
+    - hỗ trợ khác
+
+- intent: tra_gop
+  examples: |
+    - Trả góp theo phương thức nào khác không
+    - Trả góp qua thẻ visa
+    - Có trả góp được không
+    - Có nhu cầu trả góp
+    - Minh chứng thu nhập
+    - trả góp
+    - tôi muốn trả góp
+    - trả góp như thế nào
+    - trả góp là gì
+    - trả góp lãi suất như thế nào
+
+- intent: khuyen_mai
+  examples: |
+    - Tôi muốn xem chương trình khuyến mãi
+    - Hiện nay có những chương trình khuyến mãi nào
+    - https://hacom.vn/chuong-trinh-khuyen-mai-mua-card-man-hinh-nvidia-tang-ghe-cao-cap
+    - khuyến mãi
+    - chương trình khuyến mãi
+
+- intent: ve_sinh_server
+  examples: |
+    - vệ sinh server
+    - vệ sinh máy chủ
+    - vs server
+    - vs may chu
+    - vs máy chủ
+
+- intent: ve_sinh_mtvp
+  examples: |
+    - vệ sinh máy tính desktop
+    - vs máy tính vp
+    - vệ sinh máy tính văn phòng
+    - vs máy tính văn phòng
+    - vệ sinh mt vp
+    - vệ sinh desktop
+    - làm sạch mt
+    - vệ sinh máy văn phòng
+    - vệ sinh máy vp
+
+- intent: san_pham
+  examples: |
+    - sản phẩm giảm giá
+    - thông tin sp
+    - thông tin sản phẩm mới
+    - sản phẩm xả tồn
+    - hotdeal
+    - flash sale
+    - sp top sale
+    - topsale
+    - bán chạy
+    - bán chạy nhất trong tháng
+    - xem thông tin sp
+    - chi tiết thông tin sản phầm
+    - chi tiết cấu hình
+    - sản phầm hết hàng
+    - sản phẩm còn hàng k
+    - sp này còn không
+    - sp này còn hàng k
+    - còn hàng
+
+- intent: greet
+  examples: |
+    - hey???
+    - hello
+    - hi
+    - chào
+    - xin chào
+    - chào bot
+    - có ai ở đó không
+    - tôi cần hỗ trợ
+    - Chào bạn
+    - Chào anh
+    - Chào chị
+    - Chào buổi sáng
+    - Có đó không
+    - Rãnh không
+    - Ê
+    - Hú
+    - chào em
+    - em ơi, cho anh hỏi
+    - bot ơi
+    - cho mình hỏi chút
+    - hacom
+    - chào hacom
+    - Chào Hacom
+    - chao HACOM
+    - hi hacom
+    - hello hacom
+    - morning hacom
+    - chào hanoi computer
+    - hi hanoi computer
+    - hi hanoicomputer
+    - Xin chào admin
+    - Chào
+    - Cảm ơn
+    - Gửi đơn qua email
+    - Đặt cọc sản phẩm
+    - Để tôi tìm sản phẩm khác
+    - Tư vấn thêm cho tôi.
+    - Shop ơi cho em hỏi
+    - ALO
+    - Tư vấn bán hàng
+    - Còn hàng không
+    - Chào bạn
+    - Dạ mình cảm ơn ạ
+    - Bạn cho mình hỏi chút với
+    - Chào bạn
+
+- intent: happy
+  examples: |
+    - Thật hạnh phúc
+    - Tuyệt vời
+    - Quá tuyệt
+
+- intent: iamabot
+  examples: |
+    - bạn là một con bot?
+    - bạn là human?
+    - bạn là người
+    - người chat
+    - bot chat
+    - am I talking to a bot?
+    - am I talking to a human?
+    - ai đang nói chuyện
+    - ai đang chat
+    - bạn là ai
+    - có phải nhân viên không
+    - có phải nhân viên chăm sóc khách hàng không
+    - có phải nhân viên
+
+- intent: bao_loi
+  examples: |
+    - Máy tính của tôi bị lỗi tôi phải làm gì
+    - máy tôi lại bị treo r
+    - làm sao đây máy tôi không khởi động được
+    - tai nghe tôi bị rè
+    - lỗi
+    - báo lỗi
+
+- intent: mua_lai_ssd_cu
+  examples: |
+    - Dịch vụ nâng cấp ssd
+    - Hacom sẽ thu lại ssd của tôi và lắp một chiếc ssd khác tốt hơn phải không
+    - mua lại ssd cu
+    - mua lại ssd
+    - ssd
+    - mua ssd
+
+- intent: lay_hoa_don
+  examples: |
+    - Tôi muốn lấy hóa đơn mua hàng
+    - Hóa đơn
+    - hóa đơn
+    - hóa đơn của tôi
+
+- intent: contact_nvkd
+  examples: |
+    - Nhân viên kinh doanh
+    - Kết nối đến nhân viên kinh doanh
+    - kinh doanh
+    - nvkd
+
+- intent: dat_lai_mk
+  examples: |
+    - Tôi muốn đặt lại mật khẩu
+    - mật khẩu
+    - đặt lại mật khẩu như thế nào
+    - mật khẩu là gì
+    - mật khẩu đặt lại
+
+- intent: theo_doi_don
+  examples: |
+    - theo dõi đơn
+    - đơn hàng của tôi
+    - theo dõi đơn hàng của tôi
+    - đơn hàng cần theo dõi
+

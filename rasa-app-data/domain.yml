@@ -1,77 +1,223 @@
-version: "2.0"
+version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - sanpham
-  - location
-  - vesinh
-  - vesinhmtvp
-  - vesinhserver
-  - baohanh
-  - huydon
+- huy_hd
+- ve_sinh
+- kiem_tra
+# - san_pham_tb
+- san_pham
+- contact_cskh
+- doi_tra
+- bao_loi
+- mua_lai_ssd_cu
+- lap_dat
+- thoi_gian_giao_van
+- bao_hanh
+- lay_hoa_don
+- contact_nvkd
+- tra_gop
+- phan_mem
+- phan_mem_windows
+- dia_chi_ship
+- dat_lai_mk
+- theo_doi_don
+- goodbye
+- dat_hang
+- khuyen_mai
+- san_pham_laptop
+- san_pham_ram
+- san_pham_man_hinh
+- san_pham_PC
+- san_pham_card
+- san_pham_game
+- san_pham_camera
+- san_pham_webcam
+- san_pham_wifi
+- san_pham_ghe
+- san_pham_o_cung
+- san_pham_case
+- san_pham_linh_kien
+- san_pham_tai_nghe
+- san_pham_chuot
+- ve_sinh_mtvp
+- ve_sinh_server
+- iamabot
+- happy
+- greet
+- location
+- phi_giao_hang
+- ho_tro_khac
 
 
 responses:
+  utter_bao_hanh:
+  - text: Bạn vui lòng truy cập https://hacom.vn/chinh-sach-bao-hanh để biết thêm thông tin về chính sách cũng như điều kiện bảo hành
+  - text: 'HACOM chỉ nhận bảo hành các sản phẩm chưa qua sửa chữa, các hỏng hóc do quá trình sử dụng sẽ không được bảo hành, thông tin chi tiết xem tại: https://hacom.vn/chinh-sach-bao-hanh'
+  - text: Bạn vui lòng cung cấp mã serial number và thông tin của sản phẩm để bên mình hỗ trợ tra cứu
 
-  utter_huydon:
-    - text: "Bạn cung cấp thông tin đơn đã tạo để Hacom hướng dẫn chi tiết bạn nhé !"
-      
-  utter_vesinh:
-    - text: "Bên mình có nhận vệ sinh laptop tại nhà và tại cửa hàng bạn nhé !"
-    - text: "Những sản phầm laptop mua tại Hacom được vệ sinh miễn phí bạn nhé !"
-  
-  utter_vesinhmtvp:
-    - text: "Bên mình có nhận vệ sinh destop tại VP bạn nhé !"
-    - text: "Những sản phầm desktop mua tại Hacom được vệ sinh miễn phí bạn nhé !"
+  utter_bao_loi:
+  - text: Không biết máy của bạn bị lỗi như thế nào ạ! Bạn miêu tả kĩ hơn được không?
+  - text: Nếu máy bị treo, đơ, vui lòng bấm giữ nút nguồn cho đến khi máy tắt hẳn rồi tiến hành bật lại máy!
 
-  utter_vesinhserver:
-    - text: "Bên mình có nhận vệ sinh server tại VP bạn nhé !"
-    - text: "Những sản phầm mua tại Hacom được vệ sinh miễn phí bạn nhé !"
+  utter_contact_cskh:
+  - text: Xin lỗi Quý khách! Hiện nhân viên tư vấn đang bận. Quý khách vui lòng chờ trong giây lát nhân viên tư vấn sẽ hỗ trợ ngay hoặc Quý khách vui lòng liên hệ tổng đài HACOM 19001903 để được phục vụ. Xin cảm ơn!
+  - text: Chào bạn, mình đã sẵn sàng tư vấn ! Mình giúp được gì cho bạn ạ!
+  - text: Nếu hiện tại đang quá giờ hành chính thì quý khách vui lòng chờ đến sáng mai CSKH sẽ liên hệ lại
+  - text: Hiện tại các tư vấn viên đang nhận chat quá tải, quý khách vui lòng để lại số điện thoại , tư vấn viên sẽ liên hệ lại hoặc phản hồi chat trong giây lát, xin cám ơn Quý khách !
 
-  utter_sanpham:
-    - text: "Dạ sản phẩm này bên em hiện hết hàng trên toàn hệ thống rồi ạ !"
-    - text: "Bên có thể cung cấp cho mình mã sản phầm bạn quan tâm không !"
-    - text: "Mình sẽ gửi cho bạn thông tin mô tả chi tiết sản phẩm, giá và các chương trình chiết khấu nhé!"
-    - text: "Anh chị đang quan tâm tới dòng sản phẩm nào ạ?"
-      
-  utter_baohanh:
-   - text: "Những sản phầm mua tại Hacom được bảo hành theo chính hãng và chế độ bảo hành riêng miễn phí thêm 1 năm của Hacom bạn nhé !"
-   - text: "Anh nhắn em xin địa chỉ nhận hàng nhé ạ !"
+  utter_contact_nvkd:
+  - text: Quý khách vui lòng chờ chút để tôi chuyển thông tin cho Kinh doanh tư vấn cho mình ạ
 
-  utter_location:
-    - text: "Hacom có showroom tại Hà nội, TP HCM, Vinh, Thanh Hóa, Hải Phòng, Hà Nam, Nam Định bạn nhé !"
-    - text: "Hacom Hà nội có tại Cầu Giấy, HBT, HĐ, Thanh Trì, Đông Anh bạn nhé !"
-    - text: "Bạn cần cung cấp vị trí chính xác để Hacom tính toán khoảng cách và đề xuất ưu đãi free-ship cho bạn nhé"
-    - text: "Bạn ở xa quá Hacom phải tính phí ship bạn nhé !"
-      
-  utter_greet:
-  - text: "Xin chào! Tôi có thể giúp gì cho bạn?"
-  - text: "Chào bạn! Bạn cần Bot giúp gì không?"
-  - text: "Xin chào!\nTôi là Bot, rất hân hạnh được trò chuyện với bạn!"
-  - text: "HACOM: HACOM xin kính chào! Cảm ơn anh, chị đã liên hệ tới HACOM. Thời gian hỗ trợ, tư vấn, trả lời từ 8h-24h hàng ngày. Hãy gửi cho chúng tôi mọi câu hỏi của quý anh, chị. Trân trọng!"
-  - text: "HACOM sẵn sàng hỗ trợ ạ!"
-  utter_cheer_up:
-  - text: "Đây là thiệp gửi bạn, mong bạn sẽ vui:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_dat_hang:
+  - text: 'Quý khách vui lòng truy cập vào website sau để được hướng dẫn mua hàng: HACOM - Hướng Dẫn Mua Hàng Trực Tuyến'
 
-  utter_did_that_help:
-  - text: "Nó có thể giúp bạn không?"
+  utter_dat_lai_mk:
+  - text: Vui lòng truy cập vào website https://hacom.vn/quen-mat-khau và làm theo hướng dẫn để lấy lại mật khẩu đã mất
+
+  utter_dia_chi_ship:
+  - text: Bạn vui lòng cung cấp địa chỉ giao hàng và giờ giao hàng nhé!
+  - text: HACOM cung cấp dịch vụ giao hàng miễn phí trong 100km quanh khu vực Hà Nội và TP.HCM
+
+  utter_doi_tra:
+  - text: Quý khách vui lòng lưu ý, sản phẩm bên em không nhận đổi trả nếu sản phẩm không lỗi, 1 đổi 1 trong vòng 15 ngày nếu sản phẩm lỗi, sau 15 ngày bảo hànhchính hãng (Không áp dụng đổi mới với các sản phẩm CPU, máy in, máy chiếu,máy photo, máy fax, Tivi, các sản phẩm của Apple, surface, hàng thanh lý...)!
+  - text: HACOM hỗ trợ đổi trả sản phẩm trong 15 ngày đầu, chính sách và điều kiện đổi trả xem tại https://hacom.vn/chinh-sach-bao-hanh
+  - text: Dạ đổi trả theo nhu cầu sẽ tính phí ạ!
+  - text: Bên mình ko hỗ trợ đổi trả theo nhu cầu ạ!
+
+  utter_goodbye:
+  - text: Cảm ơn quý khách đã quan tâm và sử dụng dịch vụ bên HACOM. Chúc quý khách luôn mạnh khỏe và thành công!
+  - text: "Tạm biệt bạn!"
+  - text: "Bye!"
+
+  utter_huy_hd:
+  - text: Bạn cung cấp thông tin đơn đã tạo để Hacom hướng dẫn chi tiết bạn nhé !
+  - text: Mình sẽ kết nối tời BP Bán hàng để tư vấn hủy đơn cho bạn nhé !
+
+  utter_khuyen_mai:
+  - text: 'Quý khách vui lòng truy cập vào website sau để biết thêm thông tin ưu đãi: https://hacom.vn/tin-khuyen-mai-su-kien'
+
+  utter_kiem_tra:
+  - text: Bạn vui lòng liên hệ bên kỹ thuật hoặc đến cửa hàng HACOM gần nhất để được hỗ trợ kịp thời!
+  - text: Bạn vui lòng mang máy qua để bên mình kiểm tra nhé!
+
+  utter_lap_dat:
+  - text: 'Bên mình có hỗ trợ lắp đặt sản phẩm, giá dịch vụ tham khảo tại đây: https://hacom.vn/bang-gia-vat-tu-va-dich-vu-lap-dat-hacom'
+  - text: Bạn vui lòng để lại địa chỉ nhận hàng ạ!
+
+  utter_lay_hoa_don:
+  - text: 'Quý khách vui lòng cung cấp thông tin như sau : 1. Họ và tên 2. Địa chỉ 3. Số điện thoại di động 4. Thông tin viết VAT cho công ty ( nếu có ) + Email nhận hóa đơn điện tử'
+
+  utter_mua_lai_ssd_cu:
+  - text: Bên mình hỗ trợ lắp đặt SSD mới, còn SSD cũ thì tạm thời chưa hỗ trợ thu lại ạ!
+  - text: Bên mình không thu mua lại SSD đã qua sử dụng đâu bạn nhé!
+
+  utter_phan_mem:
+  - text: 'Bên mình có hỗ trợ cài đặt hệ điều hành Windows, bộ công cụ Office 365 và các phần mềm Antivirus bản quyền. Chi tiết xem tại: https://hacom.vn/phan-mem-ban-quyen'
+
+  utter_phan_mem_windows:
+  - text: 'Bên mình hỗ trợ cài Windows bản quyền cho cá nhân và doanh nghiệp: https://hacom.vn/he-dieu-hanh'
+
+  utter_san_pham_PC:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/may-tinh-de-ban'
+
+  utter_san_pham_camera:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/camera-thiet-bi-an-ninh'
+
+  utter_san_pham_card:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/vga-card-man-hinh'
+
+  utter_san_pham_case:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/vo-case'
+
+  utter_san_pham_game:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/may-choi-game-tay-game'
+
+  utter_san_pham_ghe:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/ghe-gaming-ghe-choi-game'
+
+  utter_san_pham_laptop:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/laptop'
+
+  utter_san_pham_linh_kien:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/linh-kien-may-tinh'
+
+  utter_san_pham_man_hinh:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/man-hinh-may-tinh'
+
+  utter_san_pham_o_cung:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/o-cung-ssd'
+
+  utter_san_pham_ram:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/ram-bo-nho-trong'
+
+  utter_san_pham_tai_nghe:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/tai-nghe'
+
+  # utter_san_pham_tb:
+  #   - text: Sản phẩm hiện đang tạm hết hàng, không biết bạn có nhu cầu sử dụng như thế nào để mình tư vấn sản phẩm khác tương đương hoặc thay thế.
+  #   - text: Bên kho hàng của mình đề chữ liên hệ là hết hàng nhé!
+  #   - text: Sản phẩm hiện vẫn còn hàng thưa quý khách!
+
+  utter_san_pham_webcam:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/webcam'
+
+  utter_san_pham_wifi:
+  - text: 'Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/thiet-bi-mang'
+
+  utter_theo_doi_don:
+  - text: 'Quý khách vui lòng truy cập vào website sau và nhập thông tin cá nhân để theo dõi đơn hàng: https://hacom.vn/tra-don-hang'
+
+  utter_thoi_gian_giao_van:
+  - text: Bên mình giao hàng miễn phí trong ngày phạm vi nội thành Hà Nội, TP.HCM
+  - text: Bên mình hỗ trợ giao hàng toàn quốc, thời gian từ 1 -3 ngày tùy địa điểm, vui lòng để lại địa chỉ để mình đưa ra thông tin chính xác hơn
+
+  utter_san_pham:
+  - text: "Bên có thể cung cấp cho mình mã sản phầm bạn quan tâm không !"
+  - text: "Mình sẽ gửi cho bạn thông tin mô tả chi tiết sản phẩm, giá và các chương trình chiết khấu nhé!"
+  - text: "Anh chị đang quan tâm tới dòng sản phẩm nào ạ?"
+
+  utter_tra_gop:
+  - text: 'HACOM hiện đang hỗ trợ trả góp 0%, thông tin xem tại: https://hacom.vn/huong-dan-mua-hang-tra-gop'
+
+  utter_ve_sinh:
+  - text: Bên mình có nhận vệ sinh laptop tại nhà và tại cửa hàng bạn nhé !
+  - text: Máy mang qua chi nhánh sẽ được vệ sinh miễn phí bạn nhé!
+  - text: Những sản phầm laptop mua tại Hacom được vệ sinh miễn phí bạn nhé !
+
+  utter_ve_sinh_mtvp:
+  - text: "Bên mình có nhận vệ sinh destop tại VP bạn nhé !"
+  - text: "Những sản phầm desktop mua tại Hacom được vệ sinh miễn phí bạn nhé !"
+
+  utter_ve_sinh_server:
+  - text: "Bên mình có nhận vệ sinh server tại VP bạn nhé !"
+  - text: "Những sản phầm mua tại Hacom được vệ sinh miễn phí bạn nhé !"
+
+  utter_iamabot:
+  - text: "Tôi là 1 con Bot"
 
   utter_happy:
   - text: "Great. Thật tuyệt, tiếp thôi!"
 
-  utter_goodbye:
-  - text: "Tạm biệt bạn!"
-  - text: "Bye!"
+  utter_did_that_help:
+  - text: "Nó có thể giúp bạn không?"
 
-  utter_iamabot:
-  - text: "Tôi là 1 con Bot"
+  utter_greet:
+  - text: "Xin chào bạn, tôi là trợ lý ảo của Hacom, tôi có thể giúp gì cho bạn!"
+
+  utter_location:
+  - text: "Hacom có showroom tại Hà nội, TP HCM, Vinh, Thanh Hóa, Hải Phòng, Hà Nam, Nam Định bạn nhé !"
+  - text: "Hacom Hà nội có tại Cầu Giấy, HBT, HĐ, Thanh Trì, Đông Anh bạn nhé !"
+  - text: "Bạn cần cung cấp vị trí chính xác để Hacom tính toán khoảng cách và đề xuất ưu đãi free-ship cho bạn nhé"
+  - text: "Bạn ở xa quá Hacom phải tính phí ship bạn nhé !"
+
+  utter_phi_giao_hang:
+  - text: "Tùy vào vị trí mà Hacom sẽ tính ship cho bạn !"
+
+  utter_san_pham_chuot:
+  - text: "Đây là danh sách sản phẩm bên mình đang quan tâm: https://hacom.vn/chuot-may-tinh"
+
+  utter_ho_tro_khac:
+  - text: "Bạn đợi mình một chút, sẽ có nhân viên tư vấn liên lạc với bạn trong thời gian sớm nhất"
 
 session_config:
   session_expiration_time: 60

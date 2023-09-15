@@ -4,18 +4,32 @@ services:
   rasa:
     build:
       context: .
-      dockerfile: /rasa-setup/Dockerfile
+      dockerfile: rasa-setup/Dockerfile
     container_name: rasa
     networks: ['rasa-network']
     ports:
     - "5005:5005"
     volumes:
-    - "./rasa-app-data/models:/app/models"
-    - "./rasa-app-data/logs:/app/logs"
-    command: "run --enable-api --cors '*' --debug "
+    # - "./rasa-app-data/models:/app/models"
+    # - "./rasa-app-data/logs:/app/logs"
+    - "./rasa-app-data/:/app/"
+   # command: "run --enable-api --cors '*' --debug "
+    command: ["run","-m models", "--enable-api", "--cors", "*", "--endpoints", "endpoints.yml"]
     user: root
-
-
+  action_server:
+    container_name: action_server
+    image: rasa/rasa-sdk:latest
+    networks: ['rasa-network']
+    ports:
+    - "5055:5055"
+    volumes:
+    - "./rasa-app-data/actions:/app/actions"
+  duckling:
+    container_name: duckling
+    image: rasa/duckling:latest
+    networks: ['rasa-network']
+    ports:
+    - "8000:8000"
   
   rasa_ui:       
     image: paschmann/rasa-ui:latest
@@ -35,7 +49,7 @@ services:
     container_name: rasa_train
     build:
       context: .
-      dockerfile: /rasa-setup/Dockerfile
+      dockerfile: rasa-setup/Dockerfile
     networks: ['rasa-network']
     volumes:
       - "./rasa-app-data:/app"
