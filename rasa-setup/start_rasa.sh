@@ -1,5 +1,5 @@
 #!/bin/bash
-
+pip install pyvi
 # Đào tạo mô hình Rasa
 rasa train
 rasa train --data /app/models

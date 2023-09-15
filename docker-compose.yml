@@ -16,6 +16,10 @@ services:
    # command: "run --enable-api --cors '*' --debug "
     command: ["run","-m models", "--enable-api", "--cors", "*", "--endpoints", "endpoints.yml"]
     user: root
+    depends_on:
+      - action_server
+
+
   action_server:
     container_name: action_server
     image: rasa/rasa-sdk:latest

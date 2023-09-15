@@ -7,6 +7,8 @@ WORKDIR /app
 # Sao chép tệp kịch bản vào container
 COPY /rasa-setup/start_rasa.sh /app
 
+
+
 # Cấp quyền thực thi cho tệp kịch bản
 RUN chmod +x /app/start_rasa.sh
 
