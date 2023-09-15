@@ -1,9 +1,8 @@
 recipe: default.v1
 assistant_id: form_bot
-language: vi
+language: en
 
 pipeline:
-- name: WhitespaceTokenizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
   token_pattern: (?u)\b\w+\b
@@ -12,15 +11,26 @@ pipeline:
   dimensions:
   - number
 - name: DIETClassifier
-  epochs: 1
+  epochs: 200
   run_eagerly: True
+- name: SpacyNLP
+  model: en_core_web_sm
+- name: SpacyTokenizer
+- name: SpacyFeaturizer
+- name: RegexFeaturizer
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 200
 - name: EntitySynonymMapper
+- name: ResponseSelector
 # - name: "rasa.shared.nlu.training_data.formats.openai.transformers_tokenizer.OpenAIAutoTokenizer"
 #   model_name: "vinai/phobert-base"
 
 policies:
 - name: TEDPolicy
-  epochs: 1
+  epochs: 100
 - name: AugmentedMemoizationPolicy
 - name: RulePolicy
 cors:
