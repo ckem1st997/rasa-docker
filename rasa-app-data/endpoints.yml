@@ -5,3 +5,11 @@ duckling:
   url: http://duckling:8000
   dimensions:
   - time
+tracker_store:
+  type: redis
+  url: 192.168.3.130
+  port: 6379
+  db: 1
+  key_prefix: rasa-logs-
+  # password: 
+# use_ssl: 
