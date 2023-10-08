@@ -8,12 +8,9 @@ services:
     container_name: rasa
     networks: ['rasa-network']
     ports:
-    - "5005:5005"
+    - "${RASA_PORT}:5005"
     volumes:
-    # - "./rasa-app-data/models:/app/models"
-    # - "./rasa-app-data/logs:/app/logs"
     - "./rasa-app-data/:/app/"
-   # command: "run --enable-api --cors '*' --debug "
     command: ["run","-m models", "--enable-api", "--cors", "*", "--endpoints", "endpoints.yml"]
     user: root
     depends_on:
@@ -25,7 +22,7 @@ services:
     image: rasa/rasa-sdk:latest
     networks: ['rasa-network']
     ports:
-    - "5055:5055"
+    - "${ACTION_SERVER}:5055"
     volumes:
     - "./rasa-app-data/actions:/app/actions"
   duckling:
@@ -33,22 +30,8 @@ services:
     image: rasa/duckling:latest
     networks: ['rasa-network']
     ports:
-    - "8000:8000"
-  
-  rasa_ui:       
-    image: paschmann/rasa-ui:latest
-    container_name: rasa_ui
-    networks: ['rasa-network']
-    ports:
-      - "5001:5001"
-    depends_on:
-      - rasa
-    environment:
-      rasa_endpoint: "http://rasa:5005"
+    - "${DUCKLING_PORT}:8000"
 
-# thực hiện train data đẩy model vô rasa để xử lý, sẽ phải đợi lâu
-# setup file với thư mục như mẫu
-# train xong thì khởi động lại
   rasa_train:
     container_name: rasa_train
     build:
@@ -69,66 +52,11 @@ services:
       dockerfile: Chatbot-UI/Dockerfile
     networks: ['rasa-network']
     ports:
-      - "5010:80"
+      - "${CHATBOT_UI_PORT}:80"
+    environment:
+      - URL_CHATBOT=${URL_CHATBOT}
     depends_on:
       - "rasa"
 
-
-
 networks: {rasa-network: {}}
-
-  # duckling:
-  #   restart: always
-  #   image: "rasa/duckling:0.1.6.3"
-  #   expose:
-  #     - "8000"
-  #   command: ["duckling-example-exe", "--no-access-log", "--no-error-log"]
-
-  # rasa-x:
-  #   image: rasa/rasa-x
-  #   container_name: rasa-x
-  #   networks: ['rasa-network']
-  #   volumes:
-  #     - ./app:/app
-  #   ports:
-  #   - "5002:5002"
-  #   environment:
-  #     - RASA_X_HOST=rasa
-  #     - RASA_X_PORT=5005
-  #     - RASA_X_PASSWORD=admin
-  #     - DB_HOST=db
-  #     - DB_PORT=5432
-  #     - DB_USER=rasa
-  #     - DB_PASSWORD=rasa
-  #     - RABBITMQ_HOST=rabbitmq
-  #     - RABBITMQ_PORT=5672
-  #     - RABBITMQ_USERNAME=admin
-  #     - RABBITMQ_PASSWORD=admin
-  #   depends_on:
-  #     - rasa
-  #     - db
-  #     - rabbitmq
-    # command: "run rasa x -–no-prompt"
-
-  # db:
-  #   image: postgres:12
-  #   networks: ['rasa-network']
-  #   container_name: db-rasa-x
-  #   volumes:
-  #     - ./db:/var/lib/postgresql/data
-  #   environment:
-  #     POSTGRES_DB: rasa
-  #     POSTGRES_USER: rasa
-  #     POSTGRES_PASSWORD: rasa
-
-  # rabbitmq:
-  #   image: "rabbitmq:management"
-  #   container_name: rabbitmq
-  #   networks: ['rasa-network']
-  #   ports:
-  #     - "5672:5672"
-  #     - "15672:15672"
-  #   environment:
-  #     - RABBITMQ_DEFAULT_USER=admin
-  #     - RABBITMQ_DEFAULT_PASS=
-
+#docker-compose --env-file .env.dev up -d
