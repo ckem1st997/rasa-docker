@@ -7,14 +7,14 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Chat-UI.csproj", "."]
-RUN dotnet restore "./Chat-UI.csproj"
+COPY ["Chat-UI/Chat-UI.csproj", "."]
+RUN dotnet restore
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "Chat-UI.csproj" -c Release -o /app/build
+RUN dotnet build "Chat-UI/Chat-UI.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Chat-UI.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "Chat-UI/Chat-UI.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
