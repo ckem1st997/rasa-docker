@@ -19,6 +19,11 @@ namespace Chat_UI.Controllers
             ViewBag.Url = _configuration["URL_CHATBOT"];
             return View();
         }
+        public IActionResult tl_canhan()
+        {
+            ViewBag.Url = _configuration["URL_CHATBOT"];
+            return View();
+        }
 
         public IActionResult Privacy()
         {
