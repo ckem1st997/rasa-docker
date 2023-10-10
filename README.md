@@ -29,5 +29,21 @@ docker-compose --env-file .env.dev up -d
 ```sh
 docker-compose --env-file .env.prod up -d
 ```
-## Quick Start ⚡
+## Cấu trúc thư mục ⚡
 
+
+**Chat-UI**
+
+UI Chat sử dụng ASP.NET CORE
+
+**rasa-app-data**
+
+Cấu hình Rasa
+
+**docker-compose.yml**
+
+File chạy các image
+
+**.env.dev**
+
+File cấu hình môi trường dev
