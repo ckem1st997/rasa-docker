@@ -27,7 +27,7 @@ docker-compose --env-file .env.dev up -d
 
 **Chạy môi trường prodution**
 ```sh
-docker-compose --env-file .env.prod up -d
+docker-compose -f docker-compose-p.yml up -d
 ```
 ## Cấu trúc thư mục ⚡
 
