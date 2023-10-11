@@ -25,8 +25,8 @@ services:
     - "${ACTION_SERVER}:5055"
     volumes:
     - "./rasa-app-data/actions:/app/actions"
-  duckling:
-    container_name: duckling
+  duckling-dev:
+    container_name: duckling-dev
     image: rasa/duckling:latest
     networks: ['rasa-network-dev']
     ports:
@@ -46,7 +46,7 @@ services:
 
 # vào bằng http
   chatbot-ui-dev:
-    container_name: chatbot-ui
+    container_name: chatbot-ui-dev
     build:
       context: .
       dockerfile: Chat-UI/Dockerfile
