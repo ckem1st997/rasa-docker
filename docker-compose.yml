@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: rasa-setup/Dockerfile
-    container_name: rasa
+    container_name: rasa-${NAME}
     networks: ['rasa-network']
     ports:
     - "${RASA_PORT}:5005"
@@ -18,7 +18,7 @@ services:
 
 
   action_server:
-    container_name: action_server
+    container_name: action_server-${NAME}
     image: rasa/rasa-sdk:latest
     networks: ['rasa-network']
     ports:
@@ -26,14 +26,14 @@ services:
     volumes:
     - "./rasa-app-data/actions:/app/actions"
   duckling:
-    container_name: duckling
+    container_name: duckling-${NAME}
     image: rasa/duckling:latest
     networks: ['rasa-network']
     ports:
     - "${DUCKLING_PORT}:8000"
 
   rasa_train:
-    container_name: rasa_train
+    container_name: rasa_train-${NAME}
     build:
       context: .
       dockerfile: rasa-setup/Dockerfile
@@ -46,7 +46,7 @@ services:
 
 # vào bằng http
   chatbot-ui:
-    container_name: chatbot-ui
+    container_name: chatbot-ui-${NAME}
     build:
       context: .
       dockerfile: Chat-UI/Dockerfile
