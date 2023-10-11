@@ -14,7 +14,7 @@ services:
     command: ["run","-m models", "--enable-api", "--cors", "*", "--endpoints", "endpoints.yml"]
     user: root
     depends_on:
-      - action_server
+      - action_server-${NAME}
 
 
   action_server:
@@ -42,7 +42,7 @@ services:
       - "./rasa-app-data:/app"
     command: "train"
     depends_on:
-      - "rasa"
+      - "rasa-${NAME}"
 
 # vào bằng http
   chatbot-ui:
