@@ -58,5 +58,5 @@ services:
     depends_on:
       - "rasa"
 
-networks: {rasa-network: {}}
+networks: {rasa-network: {driver: bridge}}
 #docker-compose --env-file .env.dev up -d
