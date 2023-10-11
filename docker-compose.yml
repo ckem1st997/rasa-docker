@@ -8,7 +8,7 @@ services:
     container_name: rasa-dev
     networks: ['rasa-network-dev']
     ports:
-    - "${RASA_PORT}:5005"
+    - "5105:5005"
     volumes:
     - "./rasa-app-data/:/app/"
     command: ["run","-m models", "--enable-api", "--cors", "*", "--endpoints", "endpoints.yml"]
@@ -22,7 +22,7 @@ services:
     image: rasa/rasa-sdk:latest
     networks: ['rasa-network-dev']
     ports:
-    - "${ACTION_SERVER}:5055"
+    - "5155:5055"
     volumes:
     - "./rasa-app-data/actions:/app/actions"
   duckling-dev:
@@ -30,7 +30,7 @@ services:
     image: rasa/duckling:latest
     networks: ['rasa-network-dev']
     ports:
-    - "${DUCKLING_PORT}:8000"
+    - "8100:8000"
 
   rasa_train-dev:
     container_name: rasa_train-dev
@@ -52,9 +52,9 @@ services:
       dockerfile: Chat-UI/Dockerfile
     networks: ['rasa-network-dev']
     ports:
-      - "${CHATBOT_UI_PORT}:80"
+      - "5110:80"
     environment:
-      - URL_CHATBOT=${URL_CHATBOT}
+      - URL_CHATBOT=http://192.198.3.130:5105/
     depends_on:
       - "rasa-dev"
 
