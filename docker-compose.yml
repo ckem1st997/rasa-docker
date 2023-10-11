@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: rasa-setup/Dockerfile
-    container_name: rasa
+    container_name: rasa-dev
     networks: ['rasa-network-dev']
     ports:
     - "${RASA_PORT}:5005"
