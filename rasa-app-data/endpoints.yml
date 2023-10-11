@@ -1,0 +1,15 @@
+action_endpoint:
+  url: http://action_server:5055/webhook
+
+duckling:
+  url: http://duckling:8000
+  dimensions:
+  - time
+tracker_store:
+  type: redis
+  url: 192.168.3.130
+  port: 6379
+  db: 0
+  key_prefix: rasa
+  # password: 
+# use_ssl: 

@@ -1,0 +1,62 @@
+version: '3.0'
+
+services:
+  rasa:
+    build:
+      context: .
+      dockerfile: rasa-setup/Dockerfile
+    container_name: rasa
+    networks: ['rasa-network']
+    ports:
+    - "${RASA_PORT}:5005"
+    volumes:
+    - "./rasa-app-data/:/app/"
+    command: ["run","-m models", "--enable-api", "--cors", "*", "--endpoints", "endpoints.yml"]
+    user: root
+    depends_on:
+      - action_server
+
+
+  action_server:
+    container_name: action_server
+    image: rasa/rasa-sdk:latest
+    networks: ['rasa-network']
+    ports:
+    - "${ACTION_SERVER}:5055"
+    volumes:
+    - "./rasa-app-data/actions:/app/actions"
+  duckling:
+    container_name: duckling
+    image: rasa/duckling:latest
+    networks: ['rasa-network']
+    ports:
+    - "${DUCKLING_PORT}:8000"
+
+  rasa_train:
+    container_name: rasa_train
+    build:
+      context: .
+      dockerfile: rasa-setup/Dockerfile
+    networks: ['rasa-network']
+    volumes:
+      - "./rasa-app-data:/app"
+    command: "train"
+    depends_on:
+      - "rasa"
+
+# vào bằng http
+  chatbot-ui:
+    container_name: chatbot-ui
+    build:
+      context: .
+      dockerfile: Chat-UI/Dockerfile
+    networks: ['rasa-network']
+    ports:
+      - "${CHATBOT_UI_PORT}:80"
+    environment:
+      - URL_CHATBOT=${URL_CHATBOT}
+    depends_on:
+      - "rasa"
+
+networks: {rasa-network: {}}
+#docker-compose --env-file .env.dev up -d

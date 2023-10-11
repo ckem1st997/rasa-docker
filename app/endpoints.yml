@@ -1,0 +1,20 @@
+tracker_store:
+  type: SQL
+  dialect: "postgresql"
+  url: ${DB_HOST}
+  db: ${DB_DATABASE}
+  username: ${DB_USERNAME}
+  password: ${DB_PASSWORD}
+
+action_endpoint:
+  url: "http://rasa:5055/webhook"
+
+model_storage:
+  type: "local"
+  path: "/app/models"
+
+event_broker:
+  type: "pika"
+  url: ${RABBITMQ_HOST}:${RABBITMQ_PORT}
+  username: ${RABBITMQ_USERNAME}
+  password: ${RABBITMQ_PASSWORD}

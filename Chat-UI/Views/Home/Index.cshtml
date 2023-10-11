@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section>
+    <h1><img src="https://hanoicomputercdn.com/media/lib/09-08-2023/logo-hacom-since-2001.png" /></h1>
+    <h1>HAcom ChatBot</h1>
+    <p>Click on the chat button to start chatting</p>
+</section>
+
+<div id="chat-container"></div>
+<script src="/chatbot-ui.js"></script>
+<script>
+    createChatBot(host =  '@ViewBag.Url' + 'webhooks/rest/webhook', botLogo = "https://hanoicomputercdn.com/media/lib/09-08-2023/logo-hacom-since-2001.png",
+        title = "BOT TEST HA.COM", welcomeMessage = "Xin chào, tôi là trợ lý mới của Hacom, tôi có thể giúp gì cho bạn", inactiveMsg = "Server đang lỗi ...", theme = "purple")
+</script>
