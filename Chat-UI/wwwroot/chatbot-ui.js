@@ -1,4 +1,4 @@
-/*
+﻿/*
 Makes backend API call to rasa chatbot and display output to chatbot frontend
 */
 
@@ -21,35 +21,40 @@ function init() {
 
     <div class='chat-popup'>
     
-		<div class='chat-header'>
-			<div class='chatbot-img'>
-				<img src='${botLogoPath}' alt='Chat Bot image' class='bot-img'> 
-			</div>
-			<h3 class='bot-title'>Covid Bot</h3>
-			<button class = "expand-chat-window" ><img src="./icons/open_fullscreen.png" class="icon" ></button>
-		</div>
+    <div class='chat-header'>
+        <div class='chatbot-img'>
+            <img src='${botLogoPath}' alt='Chat Bot image' class='bot-img'>  
+        </div>
+        <h3 class='bot-title'>Covid Bot</h3>
+        <!-- <span>Trợ Lý AI</span> -->
+        <button class = "expand-chat-window" ><img src="./icons/open_fullscreen.png" class="icon" ></button>
+    </div>
+
+    <div style="height: 100px; " >
+                
+            <div style=" display: flex; justify-content: center; margin-top: 10px; color: dimgray; font-size: 12px;">Chọn trợ lý Bạn muốn trò chuyện</div>
+                
+                <div style="display: flex; justify-content: center; gap: 15px; ">
+                    <div  style="width: 120px; height: 50px; " >
+                        <button class='btn-option'>
+                        <img src='./imgs/bot-logo.png' alt='Chat Bot image' class='bot-img'> 
+                        <div style="color: #1e90ff; font-size: 12px;" >Hỏi trợ lí AI tại đây</div>
+                        </button>
+                    </div>
+                    <div  style="width: 120px; height: 50px;  ">
+                        <button class='btn-option' onclick='openNewTab()' > 
+                        <img src='https://salt.tikicdn.com/ts/ta/4e/cd/92/b3593adaf274fc49a6ace088ff96471b.png' alt='Chat Bot image' class='bot-img'> 
+                        <div style=" color: #1e90ff; font-size: 12px; ">Hỏi trợ lí Cá nhân</div>
+                        </button>
+                    </div> 
+                </div>               
+        </div>
 
 		<div class='chat-area'>
             <div class='bot-msg'>
                 <img class='bot-img' src ='${botLogoPath}' />
 				<span class='msg'>Hi, How can i help you?</span>
 			</div>
-
-            <!-- <div class='bot-msg'>
-                <img class='bot-img' src ='${botLogoPath}' />
-                <div class='response-btns'>
-                    <button class='btn-primary' onclick= 'userResponseBtn(this)' value='/sign_in'>sample btn</button>            
-                </div>
-			</div> -->
-
-			<!-- <div class='bot-msg'>
-				<img class='msg-image' src = "https://i.imgur.com/nGF1K8f.jpg" />
-			</div> -->
-
-			<!-- <div class='user-msg'>
-				<span class='msg'>Hi, How can i help you?</span>
-			</div> -->
-			
 
 		</div>
 
@@ -125,6 +130,24 @@ function init() {
 
 // end of init function
 
+function openNewTab() {
+    window.open('/Home/tl_canhan');
+    // const script = document.createElement('script');
+    // script.type = 'text/javascript';
+    // script.innerHTML = `!function(e,t,n,s,a,c,i){
+    //     e.CSLiveChatWidget=a,e[a]=e[a]
+    //     ||function(){(e[a].q=e[a].q
+    //     ||[]).push(arguments)},e[a].l=1*new Date,
+    //     c=t.createElement(n),
+    //     i=t.getElementsByTagName(n)[0],
+    //     c.async=1,
+    //     c.src=s,
+    //     i.parentNode.insertBefore(c,i)
+    // }
+    // (window,document,"script","https://webchat.caresoft.vn:8091/widget/widget.min.js?v=1.0","cslw");
+    // cslw("create", {"domain":"hanoicomputer","domainId":8934,"isSPA":1});`;
+    // document.head.appendChild(script);
+}
 
 
 var passwordInput = false;
