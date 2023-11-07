@@ -54,7 +54,7 @@ services:
     ports:
       - "5010:80"
     environment:
-      - URL_CHATBOT=http://192.198.3.130:5005/
+      - URL_CHATBOT=http://192.168.3.96:5005/
     depends_on:
       - "rasa"
 
