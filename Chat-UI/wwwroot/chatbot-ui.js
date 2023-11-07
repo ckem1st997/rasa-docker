@@ -22,11 +22,8 @@ function init() {
     <div class='chat-popup'>
     
     <div class='chat-header'>
-        <div class='chatbot-img'>
-            <img src='${botLogoPath}' alt='Chat Bot image' class='bot-img'>  
-        </div>
+        <span>Trợ lý AI</span>
         <h3 class='bot-title'>Covid Bot</h3>
-        <!-- <span>Trợ Lý AI</span> -->
         <button class = "expand-chat-window" ><img src="./icons/open_fullscreen.png" class="icon" ></button>
     </div>
 
