@@ -52,7 +52,7 @@ services:
       dockerfile: Chat-UI/Dockerfile
     networks: ['rasa-network-dev']
     ports:
-      - "5110:80"
+      - "5010:80"
     environment:
       - URL_CHATBOT=http://192.168.3.96:5105/
     depends_on:
