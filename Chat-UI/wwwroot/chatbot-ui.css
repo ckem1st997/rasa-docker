@@ -16,13 +16,30 @@
 }
 
 .btn-option {
-    padding: 0;
+    margin-top: 5px;
+    padding: 10px;
     border: none;
     background: none;
+    border-radius: 10%;
 }
 .btn-option:hover {
      background: #ccc;
 
+}
+.img-option {
+    border-radius: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+.img-option2 {
+    border-radius: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    border: 2px solid #1e87f0;
 }
 
 .chat-btn {
