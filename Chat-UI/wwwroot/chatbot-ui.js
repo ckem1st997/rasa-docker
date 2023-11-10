@@ -27,20 +27,20 @@ function init() {
         <button class = "expand-chat-window" ><img src="./icons/open_fullscreen.png" class="icon" ></button>
     </div>
 
-    <div style="height: 100px; " >
+    <div style="height: 120px; " >
                 
             <div style=" display: flex; justify-content: center; margin-top: 10px; color: dimgray; font-size: 12px;">Chọn trợ lý Bạn muốn trò chuyện</div>
                 
                 <div style="display: flex; justify-content: center; gap: 15px; ">
                     <div  style="width: 120px; height: 50px; " >
                         <button class='btn-option'>
-                        <img src='./imgs/bot-logo.png' alt='Chat Bot image' class='bot-img'> 
+                        <img src='./imgs/bot-logo.png' alt='Chat Bot image' class='img-option'> 
                         <div style="color: #1e90ff; font-size: 12px;" >Hỏi trợ lí AI tại đây</div>
                         </button>
                     </div>
                     <div  style="width: 120px; height: 50px;  ">
                         <button class='btn-option' onclick='openNewTab()' > 
-                        <img src='https://salt.tikicdn.com/ts/ta/4e/cd/92/b3593adaf274fc49a6ace088ff96471b.png' alt='Chat Bot image' class='bot-img'> 
+                        <img src='https://salt.tikicdn.com/ts/ta/4e/cd/92/b3593adaf274fc49a6ace088ff96471b.png' alt='Chat Bot image' class='img-option2'> 
                         <div style=" color: #1e90ff; font-size: 12px; ">Hỏi trợ lí Cá nhân</div>
                         </button>
                     </div> 
